@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Dongle:wght@300;400;700&display=swap');
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Dongle', sans-serif;
+  width: 100vw;
+  height: 100vh;
+  min-width: 100vw;
+  background: linear-gradient(270deg, #eeeecc, #ffffff, #eeeecc);
+  overflow-x: hidden;
+}
+#root {
+  width: inherit;
+  min-width: 100vw;
+  height: inherit;
+}
+
+::-webkit-scrollbar {
+  width: 0.6rem;
+  background-color: hsl(0, 0%, 74%);
+}
+::-webkit-scrollbar-thumb {
+  background-color: hsl(0, 0%, 17%);
+  border-radius: 0.5rem;
+}
+
+::-webkit-scrollbar-button {
+  background-color: transparent;
+  border: 1px solid #555;
+  color: #fff;
+  border-radius: 0.5rem;
+}

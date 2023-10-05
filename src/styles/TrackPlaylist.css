@@ -1,0 +1,13 @@
+.tracklist {
+  display: flex;
+  width: 98%;
+  align-items: center;
+  gap: 0.9em;
+}
+.tracklist__header--img {
+  width: 100px;
+  border-radius: 0.5em;
+}
+.tracklist__article--list {
+  list-style: none;
+}

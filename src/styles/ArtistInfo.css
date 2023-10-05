@@ -1,0 +1,81 @@
+.artistInfo {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+}
+.artistInfo__header--img {
+  width: 250px;
+  border-radius: 1.5em;
+  box-shadow: 0 2px 4px gray;
+}
+.artistInfo__info {
+  width: 15em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+}
+.artistInfo__info--name {
+  font-size: 2.5em;
+}
+.artistInfo__info--list {
+  list-style: none;
+  font-size: 1.3em;
+}
+.artistInfo__info--genres {
+  font-weight: bold;
+}
+.artistInfo__info--genres-item {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  padding: 0;
+}
+.artistInfo__info--genres-item li {
+  white-space: nowrap;
+  font-size: 0.8em;
+  margin-right: 5px;
+}
+.artistInfo__info--genres-item li:not(:last-child)::after {
+  content: ', ';
+}
+@media (max-width: 426px) {
+  .artistInfo__header--img {
+    width: 150px;
+  }
+  .artistInfo__info {
+    width: 10em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+  }
+  .artistInfo__info--genres-item {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+  }
+  .artistInfo__info--genres-item li {
+    white-space: wrap;
+
+  }
+  .artistInfo__info--genres-item li:not(:last-child)::after {
+    content: '';
+  }
+}
+@media (max-width: 380px) {
+  .artistInfo__info {
+    width: 8em;
+  }
+  .artistInfo__header--img {
+    width: 130px;
+  }
+  .artistInfo__info--name {
+    font-size: 2em;
+  }
+}
+@media (max-width: 330px) {
+  
+}

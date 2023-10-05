@@ -1,0 +1,81 @@
+.card {
+  position: relative;
+  width: 230px;
+  height: 330px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 8px gray;
+  padding: 0.9em;
+  border-radius: 0.5em;
+  background-color: #ffffff;
+  transition: transform 100ms ease;
+}
+.card:hover {
+  transform: scale(1.03);
+}
+.card__header--img {
+  width: 98%;
+  border-radius: 0.5em;
+}
+.card__body--name {
+  width: 85%;
+  font-size: 1.8em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.card__body--link {
+  text-decoration: none;
+  color: inherit;
+}
+.card__body--link:hover {
+  color: rgb(138, 138, 234);
+}
+.card__body--list {
+  list-style: none;
+  font-size: 1.2em;
+}
+.card__body--list li {
+  margin-top: -0.5em;
+  cursor: pointer;
+}
+.card__body--list li:hover {
+  color: rgb(138, 234, 232);
+}
+.card__footer {
+  position: absolute;
+  right: 1.5em;
+  bottom: 0.5em;
+}
+.card__footer--icon {
+  font-size: 1.5em;
+}
+.card__footer--icon i {
+  border-radius: 50%;
+  box-shadow: 0 1px 2px gray;
+}
+.card__footer--icon i:hover {
+  color: rgba(0, 0, 0, 0.566);
+}
+.add {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+.spo {
+  color: green;
+}
+@media (max-width: 769px) {
+  .card {
+    width: 140px;
+    height: 240px;
+  }
+  .card__footer {
+    position: absolute;
+    right: 0.5em;
+    bottom: 0.5em;
+  }
+  .card__footer--icon {
+    font-size: 1em;
+  }
+}

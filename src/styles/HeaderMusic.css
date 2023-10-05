@@ -1,0 +1,209 @@
+.MusicHeader {
+  width: 100vw;
+}
+
+
+.home__header {
+  position: fixed;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  height: 3.5em;
+  background-color: #0F0817;
+  padding-left: 1.5em;
+  z-index: 1;
+}
+@media (max-width: 376px) {
+  .home__header {
+    width: 103%;
+  }
+}
+.home__article--title {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 7em;
+  height: 3.5em;
+  color: white;
+}
+.home__header--text {
+  font-size: 1.3em;
+}
+.text__p2 {
+  font-size: 1.5em;
+  margin-top: -0.6em;
+}
+.home__notes {
+  width: 3em;
+  height: 2.3em;
+}
+.home__header--btns {
+  position: absolute;
+  top: 1em;
+  right: 1.5em;
+  display: flex;
+  gap: 0.8em;
+}
+.home__header--btns button{
+  width: 7em;
+  color: #ffffff;
+  height: 2.5em;
+  font-size: 0.7em;
+  padding: 0.2em;
+  background: transparent;
+  border: 2px solid white;
+  border-radius: 2em;
+  cursor: pointer;
+}
+.home__header--btn1 {
+  cursor: pointer;
+}
+.show__headerM {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.705);
+  z-index: 2;
+  transition: right .5s ease-in-out;
+}
+.headerM {
+  position: fixed;
+  top: 0;
+  right: -120%;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.705);
+  z-index: 2;
+  transition: right .5s ease-in-out;
+}
+.headerMusic {
+  position: absolute;
+  top: 5em;
+  right: 3em;
+  width: 20em;
+  height: 85%;
+  background-color: #fff;
+  border-radius: 0.6em;
+  z-index: 1;
+  box-shadow: 0 4px 8px gray;
+}
+.headerMusic__btn--close {
+  border: none;
+  font-size: 1.5em;
+  background-color: white;
+  margin-left: 0.5em;
+  margin-top: 0.5em;
+  cursor: pointer;
+}
+.headerMusic__form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* -- Cassete -- */
+.form__cassete {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form__ladoB,
+.form__ladoA{
+  position: absolute;
+  width: 250px;
+  transition: transform 0.5s;
+  backface-visibility: hidden;
+}
+.showform,
+.showformA {
+  position: absolute;
+  width: 250px;
+  transition: transform 0.5s;
+  backface-visibility: hidden;
+}
+.form__ladoA {
+  transform: perspective(500px) rotateY(0deg);
+}
+.form__ladoB {
+  transform: perspective(500px) rotateY(180deg);
+}
+
+.showformA {
+  transform: perspective(500px) rotateY(180deg);
+}
+.showform {
+  transform: perspective(500px) rotateY(360deg);
+}
+
+.form__img {
+  position: relative;
+  width: inherit;
+}
+.form__ladoA--img,
+.form__ladoB--img{
+  position: absolute;
+  width: inherit;
+}
+.form__ladoA--input,
+.form__ladoB--input,
+.form__message {
+  position: relative;
+  z-index: 1;
+}
+.form__ladoA--input,
+.form__ladoB--input {
+  top: 1.3em;
+  left: 1.5em;
+  width: 83%;
+  height: 2.4em;
+  border-radius: 0.5em;
+  padding: 0.5em;
+}
+.form__message {
+  top: 1.8em;
+  left: 1.5em;
+  width: 83%;
+  height: 6em;
+  border-radius: 0.5em;
+  padding: 0.5em;
+}
+
+.cassete__btn {
+  position: absolute;
+  top: 15em;
+  left: 4.5em;
+  width: 7em;
+  height: 2em;
+  border: 1px solid black;
+  border-radius: 1em;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+}
+.arrows {
+  width: 1.2em;
+}
+.headerMusic__btn {
+  position: absolute;
+  top: 15em;
+  left: 13em;
+  width: 7em;
+  height: 2em;
+  border: 1px solid black;
+  border-radius: 1em;
+  cursor: pointer;
+}
+.headerMusic__tracks {
+  position: absolute;
+  top: 16em;
+  height: 300px;
+  overflow: auto;
+}

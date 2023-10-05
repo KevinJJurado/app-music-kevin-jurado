@@ -1,0 +1,24 @@
+.albumcard {
+  height: 15em;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+.albumcard__header img {
+  width: 180px;
+  border-radius: 1.5em;
+}
+.albumcard__name {
+  max-width: 180px;
+  font-size: 1.2em;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+@media (max-width: 380px) {
+  .albumcard__header img {
+    width: 150px;
+    border-radius: 1.5em;
+  }
+}
