@@ -1,8 +1,6 @@
 .MusicHeader {
   width: 100vw;
 }
-
-
 .home__header {
   position: fixed;
   width: 100vw;
@@ -206,4 +204,38 @@
   top: 16em;
   height: 300px;
   overflow: auto;
+}
+.modalAccount {
+  width: 8em;
+  height: 4em;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: -100%;
+  right: 4em;
+  background-color: #0f0817e7;
+  box-shadow: 0 2px 4px gray;
+  border-radius: 0.5em;
+}
+.show__modalAccount {
+  width: 8em;
+  height: 4em;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 3.6em;
+  right: 4em;
+  background-color: #0f0817e7;
+  box-shadow: 0 2px 4px gray;
+  border-radius: 0.5em;
+}
+.modalAccount__list {
+  list-style: none;
+  color: white;
+  font-size: 1.2em;
+}
+.modalAccount__list li{
+  cursor: pointer;
 }

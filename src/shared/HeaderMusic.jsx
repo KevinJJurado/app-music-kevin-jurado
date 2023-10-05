@@ -10,6 +10,7 @@ const HeaderMusic = () => {
 
   const [showCassete, setShowCassete] = useState(false)
   const [record, setRecord] = useState(false)
+  const [showModalAccount, setShowModalAccount] = useState(false)
 
   const handleCassete = (e) => {
     e.preventDefault()
@@ -43,10 +44,11 @@ const HeaderMusic = () => {
   }
 
   const handleShowPlaylist = (e) => {
-    const selectOption = e.target.value
-    if (selectOption === 'option1') {
-      navigate('/playlist')
-    } 
+    navigate('/playlist')
+  }
+
+  const handleShowAccount = () => {
+    setShowModalAccount(!showModalAccount)
   }
   
   return (
@@ -61,13 +63,16 @@ const HeaderMusic = () => {
           <span className="home__header--text"><p className='text__p1'>SHARE</p><p className='text__p2'>MUSIC</p></span>
         </div>
         <div className="home__header--btns">
-          <select onChange={handleShowPlaylist} className='home__header--select'>
-            <option value="option2">Logout</option>
-            <option value="option1">My recordings</option>           
-          </select>
+          <button onClick={handleShowAccount}>Account</button>
           <button onClick={handleShowRecord} className="home__header--btn2">🎵 Recording</button>
         </div>
       </header>
+      <div className={`${showModalAccount ? 'show__modalAccount' : 'modalAccount'}`}>
+        <ul className='modalAccount__list'>
+          <li onClick={handleShowPlaylist}>Recordings</li>
+          <li>Logout</li>
+        </ul>
+      </div>
       <div className={`${record ? 'show__headerM' : 'headerM'}`}>
         <div className='headerMusic'>
           <button onClick={handleCloseRecords} className='headerMusic__btn--close'><i className='bx bxs-arrow-to-left'></i></button>

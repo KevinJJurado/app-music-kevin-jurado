@@ -1,0 +1,20 @@
+.playlistinfo {
+  width: 342px;
+  display: flex;
+  margin: 1em;
+}
+.playlistinfo__img {
+  position: relative;
+}
+.playlistinfo__title {
+  position: absolute;
+  width: 12em;
+  height: 1.8em;
+  background-color: #fff;
+  font-size: 1.5em;
+  margin-top: 1em;
+  margin-left: 1.1em;
+  border-radius: 0.5em;
+  padding: 0.2em;
+
+}
