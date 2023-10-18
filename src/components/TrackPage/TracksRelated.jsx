@@ -12,7 +12,6 @@ const TracksRelated = ({ artist }) => {
     }
   }, [artist])
 
-  console.log(tracksList)
   
   return (
     <section className="trackRelated">

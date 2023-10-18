@@ -1,6 +1,7 @@
 .tracklist {
+  position: relative;
   display: flex;
-  width: 98%;
+  width: 97%;
   align-items: center;
   gap: 0.9em;
 }
@@ -10,4 +11,8 @@
 }
 .tracklist__article--list {
   list-style: none;
+}
+.tracklist__footer {
+  position: absolute;
+  right: .5em;
 }

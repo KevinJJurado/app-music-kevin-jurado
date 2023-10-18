@@ -41,8 +41,15 @@ const useAuth = () => {
       .then(res => console.log(res.data))
       .catch(err => console.log(err))
   }
+  
+  const logoutUser = () => {
+    dispatch(setCredentialsSlice(null))
+    localStorage.removeItem('token')
+    localStorage.removeItem('uesrname')
+    localStorage.removeItem('email')
+  }
 
-  return { loginUser, registerUser }
+  return { loginUser, registerUser, logoutUser }
 }
 
 

@@ -13,7 +13,6 @@ const PlaylistPage = () => {
     getPlaylist()
   }, [])
 
-  console.log(playlist)
   const handleBack = () => {
     navigate(-1)
   }

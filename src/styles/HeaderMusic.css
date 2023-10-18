@@ -178,8 +178,10 @@
   left: 4.5em;
   width: 7em;
   height: 2em;
-  border: 1px solid black;
+  background-color: #0F0817;
+  border: 2px solid #fff;
   border-radius: 1em;
+  color: #fff;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -195,10 +197,21 @@
   left: 13em;
   width: 7em;
   height: 2em;
-  border: 1px solid black;
+  background-color: #0F0817;
+  border: 2px solid #fff;
   border-radius: 1em;
+  color: #fff;
   cursor: pointer;
 }
+.cassete__btn:hover,
+.headerMusic__btn:hover {
+  background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
+  border: 0;
+  border-radius: 1em;
+  box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+  box-sizing: border-box;
+}
+    display
 .headerMusic__tracks {
   position: absolute;
   top: 16em;

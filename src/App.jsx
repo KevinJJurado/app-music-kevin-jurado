@@ -17,6 +17,7 @@ import './styles/AlbumCard.css'
 import './styles/ArtistSongsTop.css'
 import './styles/PlaylistPage.css'
 import './styles/PlaylistInfo.css'
+import './styles/ShowPlaylist.css'
 import HomePage from './pages/HomePage'
 import LoginPage from './pages/LoginPage'
 import RegisterPage from './pages/RegisterPage'
@@ -27,6 +28,7 @@ import ProtectedRoutes from './pages/ProtectedRoutes'
 import TrackPage from './pages/TrackPage'
 import ArtistPage from './pages/ArtistPage'
 import PlaylistPage from './pages/PlaylistPage'
+import ShowPlaylist from './components/PlaylistPage/ShowPlaylist'
 
 function App() {
 
@@ -50,6 +52,7 @@ function App() {
           <Route path='/track/:id' element={<TrackPage/>}/>
           <Route path='/artist/:id' element={<ArtistPage/>}/>
           <Route path='/playlist' element={<PlaylistPage/>}/>
+          <Route path='/showplaylist/:id' element={<ShowPlaylist/>}/>
         </Route>
       </Routes>
     </div>

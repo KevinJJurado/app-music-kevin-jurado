@@ -4,6 +4,7 @@ import TrackPlaylist from './TrackPlaylist'
 import { useForm } from 'react-hook-form'
 import usePlaylist from '../hooks/usePlaylist'
 import { useNavigate } from 'react-router-dom'
+import useAuth from '../hooks/useAuth'
 
 
 const HeaderMusic = () => {
@@ -11,6 +12,8 @@ const HeaderMusic = () => {
   const [showCassete, setShowCassete] = useState(false)
   const [record, setRecord] = useState(false)
   const [showModalAccount, setShowModalAccount] = useState(false)
+
+  const {logoutUser} = useAuth()
 
   const handleCassete = (e) => {
     e.preventDefault()
@@ -50,6 +53,11 @@ const HeaderMusic = () => {
   const handleShowAccount = () => {
     setShowModalAccount(!showModalAccount)
   }
+
+  const handleLogout = () => {
+    logoutUser()
+    navigate('/auth/login')
+  }
   
   return (
     <header className='MusicHeader'>
@@ -70,7 +78,7 @@ const HeaderMusic = () => {
       <div className={`${showModalAccount ? 'show__modalAccount' : 'modalAccount'}`}>
         <ul className='modalAccount__list'>
           <li onClick={handleShowPlaylist}>Recordings</li>
-          <li>Logout</li>
+          <li onClick={handleLogout}>Logout</li>
         </ul>
       </div>
       <div className={`${record ? 'show__headerM' : 'headerM'}`}>
@@ -95,7 +103,7 @@ const HeaderMusic = () => {
                 <textarea {...register('message')} placeholder='Enter a Message' className='form__message' id="message" />
               </div>
             </div>
-            <button className='cassete__btn' onClick={handleCassete} >{`${showCassete ? 'LADO A ' : 'LADO B'}`}<svg className='arrows' viewBox="0 0 18 20" fill="none"  xmlns="http://www.w3.org/2000/svg"><path d="M1 15H13M1 15L4.5 11.5M1 15L4.5 18.5M4 5H17M17 5L13.5 1.5M17 5L13.5 8.5" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+            <button className='cassete__btn' onClick={handleCassete} >{`${showCassete ? 'LADO A ' : 'LADO B'}`}<svg className='arrows' viewBox="0 0 18 20" fill="none"  xmlns="http://www.w3.org/2000/svg"><path d="M1 15H13M1 15L4.5 11.5M1 15L4.5 18.5M4 5H17M17 5L13.5 1.5M17 5L13.5 8.5" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
             </button>
             <div className='headerMusic__tracks'>
               {

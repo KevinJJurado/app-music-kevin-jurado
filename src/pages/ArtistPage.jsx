@@ -15,7 +15,7 @@ const ArtistPage = () => {
     getArtist(`/api/artists/${id}`)
   }, [id])
 
-  
+  console.log(artist)
   return (
     <div className='artistpage'>
       <Link className='artistpage__link' to='/'><i className='bx bx-chevron-left'></i>Back</Link>

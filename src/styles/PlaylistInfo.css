@@ -2,6 +2,12 @@
   width: 342px;
   display: flex;
   margin: 1em;
+  transition: transform 0.3s;
+}
+.playlistinfo:hover {
+  cursor: pointer;
+  transform: translateY(-50px);
+
 }
 .playlistinfo__img {
   position: relative;
@@ -11,10 +17,25 @@
   width: 12em;
   height: 1.8em;
   background-color: #fff;
+  color: #7D7D7D;
   font-size: 1.5em;
   margin-top: 1em;
   margin-left: 1.1em;
   border-radius: 0.5em;
   padding: 0.2em;
-
+  padding-left: 0.5em;
+  font-weight: 100;
+}
+.playlistinfo__message {
+  position: absolute;
+  width: 12em;
+  height: 5em;
+  background-color: #fff;
+  color: #7D7D7D;
+  font-weight: 100;
+  font-size: 1.5em;
+  margin-top: 3em;
+  margin-left: 1.1em;
+  border-radius: 0.5em;
+  padding: 0.5em;
 }
